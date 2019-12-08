@@ -1,0 +1,7 @@
+Font
+  name: damage-11px_cp1252
+  texture: damage-11px_cp1252
+  height: 20
+  glyph-size: 20 20
+  spacing: -2 -3
+  space-width: 4

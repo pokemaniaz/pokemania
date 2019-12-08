@@ -1,0 +1,411 @@
+UIWindow
+  id: shopWindow
+  focusable: false
+  image-source: /images/dungeons/shop/dungeonshop2
+  size: 529 289
+  anchors.verticalCenter: parent.verticalCenter
+  anchors.horizontalCenter: parent.horizontalCenter
+  &save: true
+  @onEscape: modules.game_dpanel.hideShop()
+
+  ScrollablePanel
+    size: 490 185
+    id: itemsPanel
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 11
+    margin-top: 54
+
+    UIButton
+      id: mystic
+      image-source: /images/dungeons/shop/mysticstar
+      size: 119 89
+      anchors.top: parent.top
+      opacity: 0.8
+      anchors.left: parent.left
+      margin-top: 2
+      margin-left: 2
+      @onClick: modules.game_dpanel.doBuyDGShopItem("mysticstar")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/10bronzetickets
+      size: 119 89
+      anchors.top: mystic.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("10bronzetickets")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/10silvertickets
+      size: 119 89
+      anchors.top: mystic.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("10silvertickets")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/10goldtickets
+      size: 119 89
+      anchors.top: mystic.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("10goldtickets")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      id: 30dgtokens
+      image-source: /images/dungeons/shop/30dungeontokens
+      size: 119 89
+      anchors.top: mystic.bottom
+      opacity: 0.8
+      anchors.left: mystic.left
+      margin-top: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("30dungeontokens")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/65dungeontokens
+      size: 119 89
+      anchors.top: 30dgtokens.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("65dungeontokens")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/100dungeontokens
+      size: 119 89
+      anchors.top: 30dgtokens.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("100dungeontokens")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/volcanictapestry
+      size: 119 89
+      anchors.top: 30dgtokens.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("volcanictapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      id: seatapestry
+      image-source: /images/dungeons/shop/seavelltapestry
+      size: 119 89
+      anchors.top: 30dgtokens.bottom
+      opacity: 0.8
+      anchors.left: 30dgtokens.left
+      margin-top: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("seavelltapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/naturiatapestry
+      size: 119 89
+      anchors.top: seatapestry.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("naturiatapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/raibolttapestry
+      size: 119 89
+      anchors.top: seatapestry.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("raibolttapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/gardestriketapestry
+      size: 119 89
+      anchors.top: seatapestry.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("gardestriketapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      id: wintapestry
+      image-source: /images/dungeons/shop/wingeontapestry
+      size: 119 89
+      anchors.top: seatapestry.bottom
+      opacity: 0.8
+      anchors.left: seatapestry.left
+      margin-top: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("wingeontapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/oreboundtapestry
+      size: 119 89
+      anchors.top: wintapestry.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("oreboundtapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/psycrafttapestry
+      size: 119 89
+      anchors.top: wintapestry.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("psycrafttapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/malefictapestry
+      size: 119 89
+      anchors.top: wintapestry.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("malefictapestry")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      id: urnbox
+      image-source: /images/dungeons/shop/urnbox
+      size: 119 89
+      anchors.top: wintapestry.bottom
+      opacity: 0.8
+      anchors.left: wintapestry.left
+      margin-top: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("urnbox")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/volcanicurn
+      size: 119 89
+      anchors.top: urnbox.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("volcanicurn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/seavellurn
+      size: 119 89
+      anchors.top: urnbox.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("seavellurn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/naturiaurn
+      size: 119 89
+      anchors.top: urnbox.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("naturiaurn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      id: raibolturn
+      image-source: /images/dungeons/shop/raibolturn
+      size: 119 89
+      anchors.top: urnbox.bottom
+      opacity: 0.8
+      anchors.left: urnbox.left
+      margin-top: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("raibolturn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/gardestrikeurn
+      size: 119 89
+      anchors.top: raibolturn.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("gardestrikeurn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/wingeonurn
+      size: 119 89
+      anchors.top: raibolturn.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("wingeonurn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/oreboundurn
+      size: 119 89
+      anchors.top: raibolturn.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("oreboundurn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      id: psyurn
+      image-source: /images/dungeons/shop/psycrafturn
+      size: 119 89
+      anchors.top: raibolturn.bottom
+      opacity: 0.8
+      anchors.left: raibolturn.left
+      margin-top: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("psycrafturn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+    UIButton
+      image-source: /images/dungeons/shop/maleficurn
+      size: 119 89
+      anchors.top: psyurn.top
+      opacity: 0.8
+      anchors.left: prev.right
+      margin-left: 3
+      @onClick: modules.game_dpanel.doBuyDGShopItem("maleficurn")
+      $hover:
+        opacity: 1.0
+      $pressed:
+        opacity: 0.6
+
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: itemsPanel.top
+    anchors.left: itemsPanel.right
+    anchors.bottom: itemsPanel.bottom
+    margin-top: 2
+    margin-bottom: 2
+    margin-left: 5
+
+  Item
+    id: ibagem
+    image-source: /images/dungeons/shop/dungeoncoins
+    margin-right: 12
+    margin-bottom: 10
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    !tooltip: tr('Dungeon Coins')
+
+  Item
+    id: count1
+    image-color: alpha
+    anchors.right: ibagem.left
+    anchors.verticalCenter: ibagem.verticalCenter
+    margin-top: 1
+    !tooltip: tr('Dungeon Coins')
+
+  UIButton
+    image-source: /images/dungeons/shop/closebutton
+    size: 40 25
+    image-clip: 0 0 40 25
+    anchors.top: parent.top
+    anchors.right: parent.right
+    opacity: 0.9
+    margin-top: 10
+    margin-right: 14
+    @onClick: modules.game_dpanel.hideShop()
+
+    $hover:
+      image-clip: 0 25 40 25
+      opacity: 1.0
+
+    $pressed:
+      image-clip: 0 50 40 25
+      opacity: 1.0

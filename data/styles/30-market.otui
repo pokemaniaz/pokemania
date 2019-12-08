@@ -1,0 +1,66 @@
+MarketWindow < UIWindow
+  size: 690 430
+  opacity: 1
+  image-source: /images/ui/market_window
+  padding: 3
+
+  ScrollablePanel
+    id: marketPanel
+    size: 171 257
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 35
+    margin-left: 22
+    layout:
+      type: grid
+      cell-size: 42 42
+      cell-spacing: 1
+      flow: true
+
+  VerticalSeparator
+    id: panelSeparator
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-left: 99
+
+  Panel
+    id: marketInfoPanel
+    size: 450 410
+    anchors.top: parent.top
+    anchors.left: panelSeparator.right
+    margin-top: 7
+    margin-left: 11
+
+    TabBarRounded
+      id: marketTabBar
+      height: 29
+      anchors.top: parent.bottom
+      anchors.right: parent.right
+      anchors.left: parent.left
+      margin-top: 5
+      margin-right: 10
+
+    Panel
+      id: marketTabContent
+      anchors.top: marketTabBar.bottom
+      anchors.right: parent.right
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      margin-right: 10
+
+  UIButton
+    id: closeButton
+    !tooltip: tr('Close')
+    size: 22 22
+    image-source: /images/ui/button_close
+    image-color: white
+    image-clip: 0 0 22 22
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 3
+    margin-right: 11
+    @onClick: self:getParent():hide()
+
+    $pressed:
+      image-clip: 0 22 22 22

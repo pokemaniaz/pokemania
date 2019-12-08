@@ -1,0 +1,80 @@
+Panel
+  OptionCheckBox
+    id: classicControl
+    !text: tr('Classic control')
+
+  OptionCheckBox
+    id: autoChaseOverride
+    !text: tr('Allow auto chase override')
+
+  OptionCheckBox
+    id: smartWalk
+    !text: tr('Enable smart walking')
+    !tooltip: tr('Will detect when to use diagonal step based on the\nkeys you are pressing')
+
+  OptionCheckBox
+    id: dashWalk
+    !text: tr('Enable dash walking')
+    !tooltip: tr('Will boost your walk on high speed characters')
+
+  OptionCheckBox
+    id: displayNames
+    !text: tr('Display creature names')
+
+  OptionCheckBox
+    id: displayHealth
+    !text: tr('Display creature health bars')
+
+  OptionCheckBox
+    id: displayMana
+    !text: tr('Display player experience bar')	
+
+  OptionCheckBox
+    id: displayText
+    !text: tr('Display text messages')
+
+  OptionCheckBox
+    id: forcePokemonShortcuts
+    !text: tr('Force shortcuts to pokemon.')
+    !tooltip: tr('It will release the pokemon by the shortcut even with the chat activated')
+
+  OptionCheckBox
+    id: forceItemShortcuts
+    !text: tr('Force shortcuts to item.')
+    !tooltip: tr('It will release the item by the shortcut even with the chat activated')
+
+  OptionCheckBox
+    id: displayMinimap
+    !text: tr('Show Minimap')
+
+  Label
+    id: minimapSizeLabel
+    !text: tr('Minimap size: %s', 'max')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 12
+    @onSetup: |
+      local value = modules.client_options.getOption('minimapSize')
+      local text = value
+      if value < 100 or value >= 300 then
+        text = 'max'
+      end
+
+      self:setText(tr('Minimap size: %s', text))
+
+  OptionScrollbar
+    id: minimapSize
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 3
+    minimum: 100
+    maximum: 300
+
+  ComboBox
+    id: changeLocale
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 5
+    width: 120

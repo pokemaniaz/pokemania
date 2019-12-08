@@ -1,0 +1,254 @@
+SkillFirstWidget < UIWidget
+
+SkillButton < UIButton
+  height: 21
+  margin-bottom: 2
+  &onClick: onSkillButtonClick
+
+SkillNameLabel < GameLabel
+  font: verdana-11px-monochrome
+  anchors.left: parent.left
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+
+SkillValueLabel < GameLabel
+  id: value
+  font: verdana-11px-monochrome
+  text-align: topright
+  anchors.right: parent.right
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+  anchors.left: prev.left
+
+KantoLabel < GameLabel
+  id: kantovalue
+  font: verdana-11px-monochrome
+  text-align: topright
+  anchors.right: parent.right
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+  anchors.left: prev.left
+  !text: '0'
+
+SkillPercentPanel < ProgressBar
+  id: percent
+  background-color: green
+  height: 5
+  image-source: /modules/game_skills/img/skillprogress
+  image-border-left: 2
+  image-border-right: 3
+  margin-top: 15
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.top: parent.top
+  phantom: false
+
+MiniWindow
+  id: skillWindow
+  !text: tr('Skills')
+  height: 50
+  icon: /modules/game_skills/img/perfil_icon
+  @onClose: modules.game_skills.onMiniWindowClose()
+  &save: true
+
+  UIButton
+    id: moneyTogetherButton
+    anchors.top: minimizeButton.top
+    anchors.right: minimizeButton.left
+    margin-right: 3
+    size: 14 14
+    image-source: /images/ui/miniwindow_buttons
+    image-clip: 112 0 14 14
+
+    $hover:
+      image-clip: 112 14 14 14
+
+    $pressed:
+      image-clip: 112 28 14 14
+
+  MiniWindowContents
+    padding-left: 5
+    padding-right: 5
+    layout: verticalBox
+
+    SkillButton
+      margin-top: 5
+      id: experience
+      height: 14
+      SkillValueLabel
+        width: 132
+        text-align: top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-left: 15
+      UIButton
+        id: clanicon
+        width: 37
+        height: 36
+        image-source: /modules/game_skills/img/skillicon
+        anchors.top: parent.top
+        anchors.left: parent.left
+
+    SkillButton
+      id: experiencee
+      height: 18
+      width: 30
+      margin-left: 85
+      SkillValueLabel
+        margin-top: -2
+        width: 30
+        font: sans-bold-16px
+        text-align: top
+        anchors.horizontalCenter: parent.horizontalCenter
+        margin-left: 15
+
+    SkillButton
+      id: level
+      SkillNameLabel
+        !text: tr('Experience')
+      SkillValueLabel
+      SkillPercentPanel
+        background-color: red
+
+    SkillButton
+      id: skillId6
+      SkillNameLabel
+        !text: tr('Fishing')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: skillId2
+      SkillNameLabel
+        !text: tr('Clan')
+      SkillValueLabel
+      SkillPercentPanel
+
+    SkillButton
+      id: health
+      height: 15
+      SkillNameLabel
+        !text: tr('Hit Points')
+      SkillValueLabel
+      visible: false
+
+    SkillButton
+      id: mana
+      height: 15
+      SkillNameLabel
+        !text: tr('Mana')
+      SkillValueLabel
+      visible: false
+
+    SkillButton
+      id: capacity
+      height: 15
+      SkillNameLabel
+        !text: tr('Capacity')
+      SkillValueLabel
+      visible: false
+
+    SkillButton
+      id: regenerationTime
+      SkillNameLabel
+        !text: tr('Regeneration Time')
+      SkillValueLabel
+      visible: false
+
+    SkillButton
+      id: offlineTraining
+      SkillNameLabel
+        !text: tr('Offline Training')
+      SkillValueLabel
+      SkillPercentPanel
+      visible: false
+
+    SkillButton
+      id: magiclevel
+      SkillNameLabel
+        !text: tr('Magic Level')
+      SkillValueLabel
+      SkillPercentPanel
+        background-color: red
+      visible: false
+
+    SkillButton
+      id: stamina
+      height: 15
+      SkillNameLabel
+        !text: tr('Stamina')
+      SkillValueLabel
+      margin-top: 8
+
+      HorizontalSeparator
+        height: 7
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: -6
+
+    SkillButton
+      id: soul
+      height: 15
+      SkillNameLabel
+        !text: tr('Total Caughts')
+      SkillValueLabel
+
+    SkillButton
+      id: kantoc
+      height: 15
+      SkillNameLabel
+        !text: tr('Kanto Caughts')
+      KantoLabel
+
+    SkillButton
+      id: dungeonpoints
+      height: 15
+      SkillNameLabel
+        !text: tr('Dungeon Coins')
+      SkillValueLabel
+
+    SkillButton
+      id: skillId1
+      margin-top: 8
+      height: 15
+      SkillNameLabel
+        !text: tr('Duels Won')
+      SkillValueLabel
+
+      HorizontalSeparator
+        height: 7
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        margin-top: -6
+
+    SkillButton
+      id: skillId0
+      height: 15
+      SkillNameLabel
+        !text: tr('Duels Lost')
+      SkillValueLabel
+
+    SkillButton
+      id: skillId2
+      SkillNameLabel
+        !text: tr('Sword Fighting')
+      SkillValueLabel
+      SkillPercentPanel
+      visible: false
+
+    SkillButton
+      id: skillId4
+      SkillNameLabel
+        !text: tr('Distance Fighting')
+      SkillValueLabel
+      SkillPercentPanel
+      visible: false
+
+    SkillButton
+      id: skillId5
+      SkillNameLabel
+        !text: tr('Shielding')
+      SkillValueLabel
+      SkillPercentPanel
+      visible: false

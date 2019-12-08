@@ -1,0 +1,51 @@
+HeadlessWindow
+  id: donate
+  size: 190 80
+  anchors.centerIn: parent
+
+  UIButton
+    id: closeButton
+    @onClick: modules.game_tvcam.donateHide()
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: -3
+    margin-right: -2
+    size: 14 14
+    image-source: /images/ui/miniwindow_buttons
+    image-clip: 28 0 14 14
+
+    $hover:
+      image-clip: 28 14 14 14
+
+    $pressed:
+      image-clip: 28 28 14 14
+
+  TextEdit
+    id: MsgText
+    size: 150 20
+    !text: tr('mensagem')
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+  TextEdit
+    id: QntText
+    size: 150 20
+    !text: tr('quantidade')
+    anchors.top: MsgText.bottom
+    anchors.left: parent.left
+
+  CheckBox
+    id: useDiamond
+    !text: tr('Rubys')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: QntText.bottom
+    margin-top: 8
+
+  Button
+    id: send
+    !text: tr('Send')
+    width: 64
+    anchors.right: closeButton.right
+    anchors.bottom: useDiamond.bottom
+    @onClick: modules.game_tvcam.Send()

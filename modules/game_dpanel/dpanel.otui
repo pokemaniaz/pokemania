@@ -1,0 +1,220 @@
+UIWindow
+  id: panelWindow
+  anchors.centerIn: parent
+  focusable: false
+  size: 482 527
+  @onEscape: modules.game_dpanel.hide()
+  
+  UIButton
+    id: closeButton
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-top: 4
+    margin-right: 7
+    @onClick: modules.game_dpanel.hide()
+    size: 31 10
+    image-source: /images/dungeons/closedungeonpanel
+    image-clip: 0 0 31 10
+
+    $hover:
+      image-clip: 0 10 31 10
+
+    $pressed:
+      image-clip: 0 20 31 10
+
+  UIButton
+    id: shopButton
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-bottom: 16
+    margin-left: 16
+    size: 96 47
+    image-clip: 0 0 96 47
+    image-source: /images/dungeons/shopbutton
+    @onClick: g_game.talk('/openDGShop')
+
+    $hover:
+      image-clip: 0 47 96 47
+
+    $pressed:
+      image-clip: 0 94 96 47
+
+  UIButton
+    id: dg1icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 150
+    margin-left: 250
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg2icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 152
+    margin-left: 270
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg3icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 175
+    margin-left: 260
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg4icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 198
+    margin-left: 216
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg5icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 185
+    margin-left: 237
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg6icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 225
+    margin-left: 273
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg11icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 87
+    margin-left: 302
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg12icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 25
+    margin-left: 225
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg14icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 135
+    margin-left: 170
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg18icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 50
+    margin-left: 135
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg23icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 325
+    margin-left: 250
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg30icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 45
+    margin-left: 300
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg31icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 150
+    margin-left: 197
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg32icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 334
+    margin-left: 294
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40
+
+  UIButton
+    id: dg33icon
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 120
+    margin-left: 338
+    size: 30 30
+    image-clip: 0 0 40 40
+
+    $hover:
+      image-clip: 0 40 40 40

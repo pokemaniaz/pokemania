@@ -1,0 +1,23 @@
+MainWindow
+  id: atencion
+  focusable: true
+  size: 550 80
+
+  Label
+    id: atencionText
+    color: white
+    text-align: center
+    anchors.top: parent.top
+    text-auto-resize: true
+    text-offset: 0 1
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: -10
+
+  Button
+    id: proseguir
+    !text: tr('Ok')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_tower.hideMsg()
+    margin-right: 1
+    margin-bottom: -5

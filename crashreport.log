@@ -1,0 +1,395 @@
+== application crashed
+app name: PokeXWorld
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: May 30 2018
+build type: RelWithDebInfo
+build revision: 0 (devel)
+crash date: May 31 2018 00:11:11
+exception: Integer divide by zero (0xc0000094)
+exception address: 0x0042ba03
+  backtrace:
+    0: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(std::function<void __cdecl(void)>::function<void __cdecl(void)><<lambda_77aced34232b49dfdde844f1519ade61>,void,void>+0x63) [0x000000000042BA03]
+    1: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(LuaObject::luaCallLuaField<Position,Position>+0xe5) [0x000000000042BB85]
+    2: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(LuaInterface::bindClassMemberFunction<LocalPlayer,void __thiscall(double,double),LocalPlayer>+0x34) [0x000000000044D274]
+    3: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(push_tuple_internal_luavalue<1>::call<std::tuple<stdext::shared_object_ptr<Item>,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,int,int,int> >+0x16) [0x000000000043B1D6]
+    4: Unknown [0x000000000028FB08]
+    5: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(luabinder::bind_fun_specializer<bool,std::function<bool __cdecl(enum Otc::GameFeature const &)>,std::tuple<enum Otc::GameFeature> >+0x38) [0x000000000046E3F8]
+    6: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(luabinder::make_mem_func<void,Item,Position const &>+0x12) [0x000000000047C452]
+    7: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(boost::exception_detail::current_exception_std_exception<std::bad_typeid>+0x9f) [0x000000000056115F]
+    8: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(luabinder::bind_fun_specializer<void,std::function<void __cdecl(stdext::shared_object_ptr<Item> const &,unsigned short const &)>,std::tuple<stdext::shared_object_ptr<Item>,unsigned short> >+0x12) [0x000000000047C102]
+    9: Unknown [0x000000000028FC60]
+    10: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_78c9543ff38f82e5f392889e3644c4a0>::operator()+0xf6) [0x000000000047C5A6]
+    11: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(luabinder::bind_fun_specializer<void,std::function<void __cdecl(stdext::shared_object_ptr<Item> const &,unsigned short const &)>,std::tuple<stdext::shared_object_ptr<Item>,unsigned short> >+0x12) [0x000000000047C102]
+    12: Unknown [0x000000000028FD50]
+    13: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_78c9543ff38f82e5f392889e3644c4a0>::operator()+0xf6) [0x000000000047C5A6]
+    14: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(std::_Func_impl<<lambda_6e1de6643895bfbd43792d3b8533f4d9>,std::allocator<int>,int,LuaInterface *>::_Move+0x30) [0x00000000004B4CD0]
+    15: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(std::function<int __cdecl(LuaInterface *)>::function<int __cdecl(LuaInterface *)><<lambda_9b65b05a4fc4c8540b698a78e2d58b10>,int,void>+0x4a) [0x00000000004928FA]
+    16: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_b10d5482d27f18d373ba2349f59fe4c2>::operator()+0x75) [0x0000000000471995]
+    17: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(md5_block_asm_data_order+0x250) [0x0000000000401250]
+    18: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(md5_block_asm_data_order+0x2d5) [0x00000000004012D5]
+    19: C:\Windows\SysWOW64\ntdll.dll(RtlInitializeExceptionChain+0x63) [0x00000000778C9902]
+    20: C:\Windows\SysWOW64\ntdll.dll(RtlInitializeExceptionChain+0x36) [0x00000000778C98D5]
+
+== application crashed
+app name: PokeXWorld
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: May 30 2018
+build type: RelWithDebInfo
+build revision: 0 (devel)
+crash date: May 31 2018 00:18:49
+exception: Integer divide by zero (0xc0000094)
+exception address: 0x0042b9f3
+  backtrace:
+    0: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(std::function<void __cdecl(void)>::function<void __cdecl(void)><<lambda_77aced34232b49dfdde844f1519ade61>,void,void>+0x53) [0x000000000042B9F3]
+    1: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(LuaObject::luaCallLuaField<Position,Position>+0xd5) [0x000000000042BB75]
+    2: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(LuaInterface::bindClassMemberFunction<LocalPlayer,void __thiscall(double,double),LocalPlayer>+0x24) [0x000000000044D264]
+    3: Unknown [0x000000000028FA04]
+    4: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(push_tuple_internal_luavalue<1>::call<std::tuple<stdext::shared_object_ptr<Item>,std::basic_string<char,std::char_traits<char>,std::allocator<char> >,int,int,int> >+0x6) [0x000000000043B1C6]
+    5: Unknown [0x000000000028FB08]
+    6: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(luabinder::bind_fun_specializer<bool,std::function<bool __cdecl(enum Otc::GameFeature const &)>,std::tuple<enum Otc::GameFeature> >+0x18) [0x000000000046E3D8]
+    7: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_d1316cd0e617952bbc5a0a58a3337418>::operator()+0x152) [0x000000000047C432]
+    8: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_24a0dfe8ae9f7f804695dc51f8e34ae3>::operator()+0x92) [0x000000000047C0E2]
+    9: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_78c9543ff38f82e5f392889e3644c4a0>::operator()+0xd6) [0x000000000047C586]
+    10: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_24a0dfe8ae9f7f804695dc51f8e34ae3>::operator()+0x92) [0x000000000047C0E2]
+    11: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(<lambda_78c9543ff38f82e5f392889e3644c4a0>::operator()+0xd6) [0x000000000047C586]
+    12: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(std::_Func_impl<<lambda_6e1de6643895bfbd43792d3b8533f4d9>,std::allocator<int>,int,LuaInterface *>::_Move+0x10) [0x00000000004B4CB0]
+    13: C:\Users\Gustavo\Desktop\pokes\cl\otclient.exe(std::function<int __cdecl(LuaInterface *)>::function<int __cdecl(LuaInterface *)><<lambda_9b65b05a4fc4c8540b698a78e2d58b10>,int,void>+0x2a) [0x00000000004928DA]
+
+== application crashed
+app name: PokeMasterX
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: May 30 2018
+build type: RelWithDebInfo
+build revision: 0 (devel)
+crash date: May 31 2018 02:44:32
+exception: Breakpoint (0x80000003)
+exception address: 0x766d67bc
+  backtrace:
+    0: C:\Windows\system32\msvcrt.dll(assert+0x659) [0x00000000766D67BC]
+    1: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(std::function<int __cdecl(LuaInterface *)>::function<int __cdecl(LuaInterface *)><<lambda_28c60ca98f0373fe5a71eab087c7da7c>,int,void>+0x15) [0x0000000000491985]
+    2: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(luabinder::pack_values_into_tuple<2>::call<std::tuple<stdext::shared_object_ptr<Creature>,Color> >+0x64) [0x00000000004912E4]
+    3: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(boost::asio::error::`dynamic initializer for 'misc_category''+0xb) [0x000000000041DADB]
+    4: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(stdext::packed_storage<unsigned char,unsigned char>::set<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >+0x22e) [0x000000000043BBCE]
+    5: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(luabinder::bind_fun_specializer<bool,std::function<bool __cdecl(enum Otc::GameFeature const &)>,std::tuple<enum Otc::GameFeature> >+0x38) [0x000000000046E3F8]
+    6: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(luabinder::make_mem_func<void,Item,Position const &>+0x12) [0x000000000047C452]
+    7: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(`dynamic atexit destructor for '__ExceptionPtr::m_badAllocExceptionPtr''+0x59192) [0x00000000007B7F27]
+    8: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(luabinder::bind_fun_specializer<void,std::function<void __cdecl(stdext::shared_object_ptr<Item> const &,unsigned short const &)>,std::tuple<stdext::shared_object_ptr<Item>,unsigned short> >+0x12) [0x000000000047C102]
+    9: Unknown [0x000000000022FC60]
+    10: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(<lambda_78c9543ff38f82e5f392889e3644c4a0>::operator()+0xf6) [0x000000000047C5A6]
+    11: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(luabinder::bind_fun_specializer<void,std::function<void __cdecl(stdext::shared_object_ptr<Item> const &,unsigned short const &)>,std::tuple<stdext::shared_object_ptr<Item>,unsigned short> >+0x12) [0x000000000047C102]
+    12: Unknown [0x000000000022FD50]
+    13: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(<lambda_78c9543ff38f82e5f392889e3644c4a0>::operator()+0xf6) [0x000000000047C5A6]
+    14: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(std::_Func_impl<<lambda_6e1de6643895bfbd43792d3b8533f4d9>,std::allocator<int>,int,LuaInterface *>::_Move+0x30) [0x00000000004B4CD0]
+    15: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(std::function<int __cdecl(LuaInterface *)>::function<int __cdecl(LuaInterface *)><<lambda_9b65b05a4fc4c8540b698a78e2d58b10>,int,void>+0x4a) [0x00000000004928FA]
+    16: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(<lambda_b10d5482d27f18d373ba2349f59fe4c2>::operator()+0x75) [0x0000000000471995]
+    17: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(md5_block_asm_data_order+0x250) [0x0000000000401250]
+    18: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(md5_block_asm_data_order+0x2d5) [0x00000000004012D5]
+    19: C:\Windows\SYSTEM32\ntdll.dll(RtlInitializeExceptionChain+0xef) [0x0000000077D937F5]
+    20: C:\Windows\SYSTEM32\ntdll.dll(RtlInitializeExceptionChain+0xc2) [0x0000000077D937C8]
+
+== application crashed
+app name: PokeMasterX
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: May 30 2018
+build type: RelWithDebInfo
+build revision: 0 (devel)
+crash date: May 31 2018 02:47:49
+exception: Access violation (0xc0000005)
+exception address: 0x00491617
+  backtrace:
+    0: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(luabinder::pack_values_into_tuple<4>::call<std::tuple<stdext::shared_object_ptr<Creature>,int,int,int> >+0x27) [0x0000000000491617]
+    1: C:\Users\Allan\Desktop\Atualização\Cliente - Cópia\otclient.exe(std::function<int __cdecl(LuaInterface *)>::function<int __cdecl(LuaInterface *)><<lambda_28c60ca98f0373fe5a71eab087c7da7c>,int,void>+0x26) [0x0000000000491996]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep  1 2018
+build type: release
+build revision: 0 (devel)
+crash date: Nov 07 2018 03:03:42
+exception: Access violation (0xc0000005)
+exception address: 0x00488663
+  backtrace:
+    0: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000488663]
+    1: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004A37DE]
+    2: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004A654C]
+    3: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000049F197]
+    4: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000456205]
+    5: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x20757c) [0x00000000006DD37C]
+    6: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004551B6]
+    7: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x19e004) [0x0000000000673E04]
+    8: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x1805be) [0x00000000006563BE]
+    9: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17eae0) [0x00000000006548E0]
+    10: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17e422) [0x0000000000654222]
+    11: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17e143) [0x0000000000653F43]
+    12: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004537D9]
+    13: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000041855B]
+    14: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000044F55E]
+    15: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x258ce9) [0x000000000072EAE9]
+    16: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000401250]
+    17: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004012D5]
+    18: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0x11a) [0x000000007714305A]
+    19: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0xea) [0x000000007714302A]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep  1 2018
+build type: release
+build revision: 0 (devel)
+crash date: Nov 07 2018 03:06:04
+exception: Access violation (0xc0000005)
+exception address: 0x00488663
+  backtrace:
+    0: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000488663]
+    1: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004A37DE]
+    2: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004A654C]
+    3: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000049F197]
+    4: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000456205]
+    5: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x20757c) [0x00000000006DD37C]
+    6: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004551B6]
+    7: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x19e004) [0x0000000000673E04]
+    8: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x1805be) [0x00000000006563BE]
+    9: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17eae0) [0x00000000006548E0]
+    10: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17e422) [0x0000000000654222]
+    11: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17e143) [0x0000000000653F43]
+    12: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004537D9]
+    13: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000044F55E]
+    14: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x258ce9) [0x000000000072EAE9]
+    15: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000401250]
+    16: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004012D5]
+    17: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0x11a) [0x000000007714305A]
+    18: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0xea) [0x000000007714302A]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep  1 2018
+build type: release
+build revision: 0 (devel)
+crash date: Nov 07 2018 03:06:50
+exception: Access violation (0xc0000005)
+exception address: 0x00488663
+  backtrace:
+    0: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000488663]
+    1: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004A37DE]
+    2: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004A654C]
+    3: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000049F197]
+    4: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000456205]
+    5: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x20757c) [0x00000000006DD37C]
+    6: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004551B6]
+    7: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x19e004) [0x0000000000673E04]
+    8: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x1805be) [0x00000000006563BE]
+    9: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17eae0) [0x00000000006548E0]
+    10: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17e422) [0x0000000000654222]
+    11: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x17e143) [0x0000000000653F43]
+    12: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004537D9]
+    13: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000041855B]
+    14: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x000000000044F55E]
+    15: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe(alGetListeneriv+0x258ce9) [0x000000000072EAE9]
+    16: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x0000000000401250]
+    17: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\otclient.exe [0x00000000004012D5]
+    18: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0x11a) [0x000000007714305A]
+    19: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0xea) [0x000000007714302A]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep  1 2018
+build type: release
+build revision: 0 (devel)
+crash date: Nov 10 2018 00:21:22
+exception: Access violation (0xc0000005)
+exception address: 0x00488663
+  backtrace:
+    0: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x0000000000488663]
+    1: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x00000000004A37DE]
+    2: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x00000000004A654C]
+    3: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x000000000049F197]
+    4: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x0000000000456205]
+    5: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x20757c) [0x00000000006DD37C]
+    6: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x00000000004551B6]
+    7: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x19e004) [0x0000000000673E04]
+    8: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x1805be) [0x00000000006563BE]
+    9: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x17eae0) [0x00000000006548E0]
+    10: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x17e422) [0x0000000000654222]
+    11: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x17e143) [0x0000000000653F43]
+    12: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x00000000004537D9]
+    13: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x000000000041855B]
+    14: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x000000000044F55E]
+    15: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x258ce9) [0x000000000072EAE9]
+    16: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x0000000000401250]
+    17: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x00000000004012D5]
+    18: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0x11a) [0x00000000777B305A]
+    19: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0xea) [0x00000000777B302A]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep  1 2018
+build type: release
+build revision: 0 (devel)
+crash date: Nov 17 2018 00:14:05
+exception: Access violation (0xc0000005)
+exception address: 0x0065f7d1
+  backtrace:
+    0: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x1899d1) [0x000000000065F7D1]
+    1: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x21b4aa) [0x00000000006F12AA]
+    2: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x19104b) [0x0000000000666E4B]
+    3: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x190ffe) [0x0000000000666DFE]
+    4: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x1c2e17) [0x0000000000698C17]
+    5: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x0000000000493369]
+    6: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x0000000000474112]
+    7: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe(alGetListeneriv+0x258cfd) [0x000000000072EAFD]
+    8: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x0000000000401250]
+    9: E:\Arquivos e Programas\Dropbox\PokexMaster\OTcliente PokéMaster X\PokeMasterX_DX9.exe [0x00000000004012D5]
+    10: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0x11a) [0x000000007798305A]
+    11: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0xea) [0x000000007798302A]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep  1 2018
+build type: release
+build revision: 0 (devel)
+crash date: Dec 09 2018 13:10:41
+exception: Access violation (0xc0000005)
+exception address: 0x6038f606
+  backtrace:
+    0: C:\Windows\SYSTEM32\d3d10warp.dll(Ordinal199+0x235fc6) [0x000000006038F606]
+    1: C:\Windows\SYSTEM32\d3d10warp.dll(Ordinal199+0x235f1a) [0x000000006038F55A]
+    2: C:\Windows\SYSTEM32\d3d10warp.dll(Ordinal199+0x22faf1) [0x0000000060389131]
+    3: C:\Windows\SYSTEM32\d3d10warp.dll(Ordinal199+0x26498d) [0x00000000603BDFCD]
+    4: C:\Windows\SYSTEM32\d3d10warp.dll(Ordinal199+0x266658) [0x00000000603BFC98]
+    5: C:\Windows\SYSTEM32\ntdll.dll(TpIsTimerSet+0x13aa) [0x000000007794DC6A]
+    6: C:\Windows\SYSTEM32\ntdll.dll(TpIsTimerSet+0x4d0) [0x000000007794CD90]
+    7: C:\Windows\System32\KERNEL32.DLL(BaseThreadInitThunk+0x24) [0x0000000077498484]
+    8: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0x11c) [0x000000007796302C]
+    9: C:\Windows\SYSTEM32\ntdll.dll(RtlValidSecurityDescriptor+0xea) [0x0000000077962FFA]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep 30 2018
+build type: release
+build revision: 0 (devel)
+crash date: Dec 07 2019 22:44:57
+exception: Integer divide by zero (0xc0000094)
+exception address: 0x004839c7
+  backtrace:
+    0: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004839C7]
+    1: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000483BBB]
+    2: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000498146]
+    3: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000048DF82]
+    4: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004AC7D5]
+    5: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444FDC]
+    6: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    7: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    8: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    9: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    10: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000043B0C8]
+    11: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000045037A]
+    12: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe(wglewIsSupported+0x129c55) [0x0000000000757B05]
+    13: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000401250]
+    14: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004012D5]
+    15: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xe4) [0x0000000077C07B74]
+    16: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xb4) [0x0000000077C07B44]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep 30 2018
+build type: release
+build revision: 0 (devel)
+crash date: Dec 07 2019 22:45:24
+exception: Integer divide by zero (0xc0000094)
+exception address: 0x004839c7
+  backtrace:
+    0: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004839C7]
+    1: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000483BBB]
+    2: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000498146]
+    3: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000048DF82]
+    4: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004AC7D5]
+    5: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444FDC]
+    6: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    7: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    8: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    9: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    10: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000043B0C8]
+    11: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000045037A]
+    12: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe(wglewIsSupported+0x129c55) [0x0000000000757B05]
+    13: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000401250]
+    14: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004012D5]
+    15: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xe4) [0x0000000077C07B74]
+    16: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xb4) [0x0000000077C07B44]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep 30 2018
+build type: release
+build revision: 0 (devel)
+crash date: Dec 07 2019 22:46:17
+exception: Integer divide by zero (0xc0000094)
+exception address: 0x004839c7
+  backtrace:
+    0: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004839C7]
+    1: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000483BBB]
+    2: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000498146]
+    3: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000048DF82]
+    4: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004AC7D5]
+    5: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444FDC]
+    6: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    7: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    8: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    9: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    10: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000043B0C8]
+    11: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000045037A]
+    12: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe(wglewIsSupported+0x129c55) [0x0000000000757B05]
+    13: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000401250]
+    14: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004012D5]
+    15: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xe4) [0x0000000077C07B74]
+    16: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xb4) [0x0000000077C07B44]
+
+== application crashed
+app name: PokeMaster X
+app version: 0.6.6
+build compiler: gcc 4.8.1
+build date: Sep 30 2018
+build type: release
+build revision: 0 (devel)
+crash date: Dec 07 2019 22:47:25
+exception: Integer divide by zero (0xc0000094)
+exception address: 0x004839c7
+  backtrace:
+    0: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004839C7]
+    1: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000483BBB]
+    2: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000498146]
+    3: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000048DF82]
+    4: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004AC7D5]
+    5: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444FDC]
+    6: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    7: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    8: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000444E6F]
+    9: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000445041]
+    10: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000043B0C8]
+    11: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x000000000045037A]
+    12: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe(wglewIsSupported+0x129c55) [0x0000000000757B05]
+    13: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x0000000000401250]
+    14: C:\Users\erick\Desktop\PokeMania\PokeMania_OPGL.exe [0x00000000004012D5]
+    15: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xe4) [0x0000000077C07B74]
+    16: C:\Windows\SYSTEM32\ntdll.dll(RtlGetAppContainerNamedObjectPath+0xb4) [0x0000000077C07B44]
+

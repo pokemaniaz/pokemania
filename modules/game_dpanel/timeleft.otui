@@ -1,0 +1,45 @@
+UIWindow
+  id: dgTimeLeft
+  focusable: false
+  draggable: true
+  opacity: 0.9
+  anchors.top: parent.top
+  anchors.right: parent.right
+  size: 120 35
+
+  UILabel
+    id: se2
+    size: 24 30
+    image-source: /images/dungeons/timeLeft/0
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-right: 2
+    margin-top: 2
+
+  UILabel
+    id: se1
+    size: 24 30
+    image-source: /images/dungeons/timeLeft/0
+    anchors.right: prev.left
+    anchors.top: se2.top
+
+  UILabel
+    id: 3p2
+    size: 24 30
+    image-source: /images/dungeons/timeLeft/2pontos
+    anchors.right: prev.left
+    anchors.top: se2.top
+
+  UILabel
+    id: min2
+    size: 24 30
+    image-source: /images/dungeons/timeLeft/0
+    anchors.right: prev.left
+    anchors.top: se2.top
+
+  UILabel
+    id: min1
+    size: 24 30
+    image-source: /images/dungeons/timeLeft/0
+    anchors.right: prev.left
+    anchors.top: se2.top

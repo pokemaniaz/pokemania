@@ -1,0 +1,336 @@
+WindowButton < UIButton
+  opacity: 0.8
+
+  $pressed:
+    opacity: 0.6
+
+  $on !pressed:
+    opacity: 1.0
+
+SlotItem < Item
+  text-align: topleft
+  text-offset: 3 2
+  image-source: /images/game/pokemon/slots/suport
+  focusable: false
+
+HeadSlot < SlotItem
+  id: slot1
+  text: 5
+  &position: {x=65535, y=1, z=0}
+
+BodySlot < SlotItem
+  id: slot4
+  &position: {x=65535, y=4, z=0}
+
+LegSlot < SlotItem
+  text: 3
+  id: slot7
+  &position: {x=65535, y=7, z=0}
+
+FeetSlot < SlotItem
+  id: slot8
+  text: R
+  &position: {x=65535, y=8, z=0}
+
+NeckSlot < SlotItem
+  id: slot2
+  &position: {x=65535, y=2, z=0}
+
+LeftSlot < SlotItem
+  id: slot6
+  text: 4
+  &position: {x=65535, y=6, z=0}
+
+FingerSlot < SlotItem
+  text: 2
+  id: slot9
+  &position: {x=65535, y=9, z=0}
+
+BackSlot < SlotItem
+  id: slot3
+  &position: {x=65535, y=3, z=0}
+
+RightSlot < SlotItem
+  id: slot5
+  &position: {x=65535, y=5, z=0}
+
+AmmoSlot < SlotItem
+  id: slot10
+  text: 1
+  &position: {x=65535, y=10, z=0}
+
+UIWidget
+  height: 200
+  draggable: false
+  anchors.right: parent.right
+  anchors.left: parent.left
+  anchors.bottom: parent.bottom
+  focusable: false
+  phantom: true
+
+  HeadlessWindow
+    id: itemsWindow
+    size: 320 80
+    draggable: false
+    focusable: false
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-bottom: 10
+
+    FeetSlot
+      anchors.top: parent.top
+      anchors.left: prev.right
+
+    VerticalSeparator
+      id: separator
+      height: 38
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 5
+
+    AmmoSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: prev.top
+      anchors.left: prev.right
+      margin-left: 5
+
+    FingerSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 2
+
+    LegSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 2
+
+    LeftSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 2
+
+    HeadSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 2
+
+    RightSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 5
+      visible: false
+
+    BodySlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 2
+      visible: false
+
+    NeckSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 2
+      visible: false
+
+    BackSlot
+      image-source: /images/game/pokemon/slots/pokeball
+      anchors.top: parent.top
+      anchors.left: prev.right
+      margin-left: 2
+      visible: false
+
+    HorizontalSeparator
+      anchors.top: separator.bottom
+      anchors.right: parent.right
+      anchors.left: parent.left
+
+    ProgressBar
+      id: playerHealth
+      height: 16
+      border-width: 0
+      background-color: #0075AA
+      anchors.right: parent.right
+      anchors.left: parent.left
+      anchors.top: prev.bottom
+      margin-top: 6
+      UIParticles
+        effect: player-effect
+        anchors.fill: parent
+        phantom: true
+      UIWidget
+        image-border: 1
+        image-border-left: 3
+        image-border-right: 3
+        image-source: /images/game/pokemon/progressbar_border
+        anchors.fill: parent
+
+    ProgressBar
+      id: playerExp
+      height: 8
+      border-width: 0
+      background-color: #FFC926
+      anchors.right: parent.right
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      UIWidget
+        image-border: 1
+        image-border-left: 3
+        image-border-right: 3
+        image-source: /images/game/pokemon/progressbar_border
+        anchors.fill: parent
+
+  HeadlessWindow
+    id: playerWindow
+    size: 112 122
+    anchors.right: prev.left
+    anchors.bottom: parent.bottom
+    margin-bottom: 10
+    margin-right: 1
+    draggable: false
+    focusable: false
+
+    UIWidget
+      id: portrait
+      size: 81 81
+      anchors.centerIn: parent
+      phantom: true
+
+    UIWidget
+      id: clan
+      size: 32 32
+      image-source: /images/game/pokemon/clan/pokemon_trainer
+      anchors.bottom: parent.bottom
+      anchors.right: parent.left
+      margin-right: -22
+      margin-bottom: -9
+      phantom: true
+
+    Label
+      id: levelLabel
+      font: verdana-11px-rounded
+      text-auto-resize: true
+      anchors.top: parent.top
+      anchors.right: parent.right
+      phantom: false
+
+  HeadlessWindow
+    id: menuWindow
+    size: 320 50
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: parent.top
+    margin-top: 68
+    draggable: false
+    focusable: false
+
+    WindowButton
+      id: guideButton
+      size: 30 30
+      !tooltip: tr('Inventory')..' (Ctrl+I)'
+      image-source: /images/topbuttons/ptb
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_pokemon.useInventory()
+
+    UIWidget
+      id: pokedex
+      size: 30 30
+      opacity: 1.0
+      tooltip: Pokedex (Ctrl+D)
+      image-source: /images/game/pokemon/pokedex
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_pokemon.startChoosePos()
+      $hover:
+        opacity: 0.8
+      $pressed:
+        opacity: 0.6
+
+    UIWidget
+      id: fishing
+      size: 30 30
+      opacity: 1.0
+      !tooltip: tr('Fishing Rod')..' (Ctrl+Z)'
+      image-source: /images/game/pokemon/fishing
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_pokemon.useVara()
+      $hover:
+        opacity: 0.8
+      $pressed:
+        opacity: 0.6
+
+    UIWidget
+      id: order
+      size: 30 30
+      opacity: 1.0
+      !tooltip: tr('Order Pokemon')
+      image-source: /images/game/pokemon/order
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_hotkeys.useOrder()
+      $hover:
+        opacity: 0.8
+      $pressed:
+        opacity: 0.6
+
+    WindowButton
+      id: skillButton
+      size: 35 35
+      !tooltip: tr('Skills')..' (Ctrl+S)'
+      image-source: /images/topbuttons/skills
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_skills.toggle()
+
+    WindowButton
+      id: battleButton
+      size: 35 35
+      !tooltip: tr('Battle')..' (Ctrl+B)'
+      image-source: /images/topbuttons/battle
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_battle.toggle()
+
+    WindowButton
+      id: vipButton
+      size: 35 35
+      !tooltip: tr('VIP List')..' (Ctrl+F)'
+      image-source: /images/topbuttons/viplist
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_viplist.toggle()
+
+    WindowButton
+      id: hotkeysButton
+      size: 30 30
+      !tooltip: tr('Hotkeys')..' (Ctrl+K)'
+      image-source: /images/game/pokemon/hotkeys
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_hotkeys.toggle()
+
+    WindowButton
+      id: questLogButton
+      size: 30 30
+      !tooltip: tr('Quest Log')
+      image-source: /images/game/pokemon/questlog
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: g_game.requestQuestLog()
+
+    WindowButton
+      id: shopButton
+      size: 30 30
+      tooltip: Emerald Shop
+      image-source: /images/topbuttons/emerald_shop
+      anchors.left: prev.right
+      anchors.bottom: prev.bottom
+      @onClick: modules.game_shop.toggle()
+

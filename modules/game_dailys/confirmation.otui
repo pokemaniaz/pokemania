@@ -1,0 +1,41 @@
+MainWindow
+  id: acceptDaily
+  focusable: true
+  size: 480 100
+  @onEscape: modules.game_dailys.hideConfirmationWindow()
+
+  Label
+    id: accText
+    color: white
+    text-align: center
+    text-auto-resize: true
+    text-offset: 0 1
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: -11
+
+  Label
+    id: warnText
+    color: white
+    text-align: center
+    text-auto-resize: true
+    text-offset: 0 1
+    anchors.top: accText.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 5
+
+  Button
+    id: accButton
+    !text: tr('Accept')
+    color: green
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-right: 35
+
+  Button
+    id: cancelButton
+    !text: tr('Cancel')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_dailys.hideConfirmationWindow()
+    margin-left: 35

@@ -1,0 +1,36 @@
+MainWindow
+  id: createteamWindow
+  text: Create Dungeon Team
+  size: 280 100
+  visible: false
+  Label
+    id: teamnameLabel
+    text: Team Name:
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: 10
+    margin-top: 5
+  TextEdit
+    id: teamnameText
+    size: 148 18
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 13
+    max-length: 15
+    margin-top: 3
+  Button
+    id: buttonCancel
+    text: Cancel
+    size: 66 20
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    margin-left: 54
+    @onClick: self:getParent():setVisible(false) self:getParent():getChildById('teamnameText'):setText('')
+  Button
+    id: buttonOk
+    text: Ok
+    size: 66 20
+    anchors.top: buttonCancel.top
+    anchors.left: buttonCancel.right
+    margin-left: 10
+    @onClick: g_game.talk('/createdgteam ' .. self:getParent():getChildById('teamnameText'):getText()) self:getParent():setVisible(false) self:getParent():getChildById('teamnameText'):setText('')

@@ -1,0 +1,83 @@
+GroupCooldownParticles < UIParticles
+  effect: groupcooldown-effect
+  phantom: true
+
+BattleIcon < UICheckBox
+  size: 20 20
+  image-color: white
+  image-rect: 0 0 20 20
+
+  $hover !disabled:
+    color: #cccccc
+
+  $!checked:
+    image-clip: 0 0 20 20
+
+  $hover !checked:
+    image-clip: 0 40 20 20
+
+  $checked:
+    image-clip: 0 20 20 20
+
+  $hover checked:
+    image-clip: 0 60 20 20
+
+  $disabled:
+    image-color: #ffffff88
+
+BattlePlayers < BattleIcon
+  image-source: /images/game/battle/battle_players
+
+BattleNPCs < BattleIcon
+  image-source: /images/game/battle/battle_npcs
+
+BattleMonsters < BattleIcon
+  image-source: /images/game/battle/battle_monsters
+
+MiniWindow
+  id: battleWindow
+  !text: tr('Battle')
+  height: 166
+  icon: /images/topbuttons/battle
+  @onClose: modules.game_battle.onMiniWindowClose()
+  &save: true
+
+  BattlePlayers
+    id: hidePlayers
+    !tooltip: tr('Hide players')
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 4
+    margin-left: -14
+    @onCheckChange: modules.game_battle.checkCreatures()
+
+  BattleNPCs
+    id: hideNPCs
+    !tooltip: tr('Hide Npcs')
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 4
+    @onCheckChange: modules.game_battle.checkCreatures()
+
+  BattleMonsters
+    id: hideMonsters
+    !tooltip: tr('Hide monsters')
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 4
+    @onCheckChange: modules.game_battle.checkCreatures()
+
+  MiniWindowContents
+    anchors.top: prev.bottom
+    margin-top: 6
+
+    Panel
+      id: battlePanel
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: parent.top
+      margin-top: 5
+      padding-right: 5
+      layout:
+        type: verticalBox
+        fit-children: true

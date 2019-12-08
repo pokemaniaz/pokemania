@@ -1,0 +1,43 @@
+UIWindow
+  id: dailysWindow
+  image-source: /images/dailys/dailyspanel
+  size: 572 371
+  anchors.verticalCenter: parent.verticalCenter
+  anchors.horizontalCenter: parent.horizontalCenter
+
+  TabBar2Vertical
+    id: stylesTabBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 97
+    margin-left: 20
+    size: 105 190
+    focusable: false
+
+  Panel
+    id: stylesTabContent
+    anchors.top: stylesTabBar.top
+    anchors.left: stylesTabBar.right
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-top: -40
+    margin-left: 7
+    margin-bottom: 20
+    margin-right: 15
+
+  Button
+    id: closeButton
+    image-source: /images/dailys/close
+    size: 26 25
+    image-clip: 0 0 26 25
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 18
+    margin-right: 6
+    @onClick: modules.game_dailys.hide()
+
+    $hover:
+      image-clip: 0 25 26 25
+
+    $pressed:
+      image-clip: 0 50 26 25

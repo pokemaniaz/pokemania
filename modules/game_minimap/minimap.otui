@@ -1,0 +1,55 @@
+MinimapMain < UIWidget
+  phantom: true
+
+MinimapText < UIWidget
+  focusable: true
+  opacity: 0.8
+  $pressed:
+    opacity: 0.6
+  $hover !pressed:
+    opacity: 1.0
+
+HeadlessWindow
+  id: minimapWindow
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  height: 150
+  margin-right: 10
+  margin-bottom: 10
+  draggable: true
+
+  Minimap
+    id: minimap1
+    anchors.fill: parent
+    margin-right: 23
+
+  Minimap
+    id: minimap
+    anchors.fill: parent
+    margin-right: 23
+
+  MinimapFloorUpButton
+    id: floorUp
+    anchors.top: parent.top
+    margin-right: 0
+    @onClick: self:getParent():getChildById('minimap'):floorUp(1)
+
+  MinimapFloorDownButton
+    id: floorDown
+    anchors.top: prev.bottom
+    margin-top: 4
+    margin-right: 0
+    @onClick: self:getParent():getChildById('minimap'):floorDown(1)
+
+  MinimapZoomInButton
+    id: zoomIn
+    anchors.bottom: next.top
+    margin-right: 0
+    margin-bottom: 4
+    @onClick: self:getParent():getChildById('minimap'):zoomIn()
+
+  MinimapZoomOutButton
+    id: zoomOut
+    margin-right: 0
+    margin-bottom: 0
+    @onClick: self:getParent():getChildById('minimap'):zoomOut()

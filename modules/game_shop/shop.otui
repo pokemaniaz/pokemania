@@ -1,0 +1,121 @@
+ClanWindow < MainWindow
+  size: 210 100
+  @onEscape: modules.game_shop.destroyClanWindow()
+
+  Label
+    text: Rank:
+    width: 38
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 2
+
+  SpinBox
+    id: spinBox
+    step: 1
+    width: 50
+    anchors.top: parent.top
+    anchors.left: prev.right
+    minimum: 1
+    maximum: 5
+    @onValueChange: |
+      local prize = 40 + 10*(self:getValue()-1)
+      self:getParent():getChildById('prize'):setText(prize..' Emeralds')
+
+  Label
+    id: prize
+    color: white
+    text: 40 Emeralds
+    text-auto-resize: true
+    icon-align: left
+    icon: /images/game/shop/prize
+    text-offset: 21 0
+    font: verdana-11px-rounded
+    anchors.verticalCenter: spinBox.verticalCenter
+    anchors.left: spinBox.right
+    margin-left: 3
+
+  Button
+    !text: tr('Cancel')
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    @onClick: modules.game_shop.destroyClanWindow()
+
+  Button
+    id: okButton
+    text: Ok
+    width: 64
+    anchors.bottom: parent.bottom
+    anchors.right: prev.left
+    margin-right: 5
+
+UIWindow
+  id: shopWindow
+  size: 582 336
+  icon-align: right
+  icon: /images/ui/shop_window
+  anchors.centerIn: parent
+  margin-right: 64
+  draggable: false
+  padding: 10
+  @onEscape: modules.game_shop.hide()
+
+  ShopTabBarVertical
+    id: shopTabBar
+    phantom: true
+    height: 326
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-left: -10
+
+  Panel
+    id: shopTabContent
+    height: 242
+    anchors.left: prev.right
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-left: 10
+    margin-bottom: 35
+
+  Label
+    id: emeraldsLabel
+    text-offset: 40 0
+    text-auto-resize: true
+    icon: /images/topbuttons/emerald_shop
+    icon-align: left
+    font: newfont-16px-rounded
+    anchors.bottom: parent.bottom
+    anchors.left: shopTabBar.right
+    margin-left: 10
+    margin-bottom: 5
+
+  Label
+    !text: tr('Search')..':'
+    text-auto-resize: true
+    anchors.right: next.left
+    anchors.verticalCenter: next.verticalCenter
+    margin-right: 5
+
+  TextEdit
+    id: searchText
+    width: 135
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-right: 10
+    shift-navigation: true
+    @onTextChange: searchOffer()
+
+  UIButton
+    id: closeButton
+    anchors.top: parent.top
+    anchors.right: parent.right
+    size: 23 22
+    image-source: /images/ui/shop_button_close
+    image-clip: 0 0 23 22
+    @onClick: modules.game_shop.hide()
+
+    $hover:
+      image-clip: 0 22 23 22
+
+    $pressed:
+      image-clip: 0 44 23 22

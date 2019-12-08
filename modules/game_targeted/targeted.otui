@@ -1,0 +1,43 @@
+UIWindow
+  size: 327 103
+  anchors.top: parent.top
+  anchors.right: parent.right
+  margin-top: 10
+  margin-left: 10
+  phantom: true
+
+  ProgressBar
+    id: healthBar
+    background-color: #D90000
+    size: 211 30
+    text-offset: 0 0
+    anchors.right: layoutPortrait.left
+    anchors.bottom: layoutPortrait.bottom
+    margin-bottom: 10
+    margin-right: -19
+
+    UIWidget
+      image-source: /images/game/pokemon/health_attacker2
+      anchors.top: parent.top
+      anchors.right: parent.left
+      margin-right: -5
+
+    UIWidget
+      image-source: /images/game/pokemon/health_attacker
+      anchors.top: parent.top
+      anchors.left: parent.right
+      margin-left: -5
+
+  UIWidget
+    id: layoutPortrait
+    size: 103 103
+    anchors.top: parent.top
+    anchors.right: parent.right
+
+    UIWidget
+      id: portrait
+      size: 81 81
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 12
+      margin-left: 11

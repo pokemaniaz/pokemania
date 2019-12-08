@@ -1,0 +1,262 @@
+SkillPanel < Panel
+  size: 150 48
+
+  UIWidget
+    id: skillIcon
+    size: 48 48
+    anchors.top: parent.top
+    anchors.left: parent.left
+
+  Label
+    text-auto-resize: true
+    font: verdana-11px-rounded
+    anchors.top: skillIcon.top
+    anchors.left: skillIcon.right
+    margin-top: 5
+    margin-left: 5
+
+  Button
+    size: 15 15
+    text: +
+    visible: false
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 10
+    @onClick: modules.game_card.doUpSkill(self:getParent())
+
+  Label
+    text-auto-resize: true
+    font: verdana-11px-rounded
+    anchors.left: skillIcon.right
+    anchors.bottom: skillIcon.bottom
+    margin-left: 5
+    margin-bottom: 5
+
+UIWindow
+  size: 690 430
+  image-source: /images/ui/card_window
+  anchors.centerIn: parent
+  padding: 3
+  @onEscape: hide()
+
+  UIWidget
+    id: logo
+    size: 347 27
+    image-source: /images/game/card/player_logo
+    phantom: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 15
+    margin-left: 25
+
+  UIWidget
+    id: playerGender
+    size: 110 110
+    phantom: true
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 25
+
+  Label
+    id: playerName
+    color: white
+    font: sans-bold-16px-rounded
+    text-auto-resize: true
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 10
+
+  Label
+    id: playerPoints
+    color: white
+    font: sans-bold-16px-rounded
+    text-auto-resize: true
+    anchors.top: prev.bottom
+    anchors.left: playerName.left
+    margin-top: 3
+
+  Label
+    id: playerLevel
+    color: white
+    font: sans-bold-16px-rounded
+    text-auto-resize: true
+    anchors.top: prev.bottom
+    anchors.left: playerPoints.left
+    margin-top: 3
+
+  Label
+    id: playerClan
+    !text: tr('Clan')..':'
+    color: white
+    font: sans-bold-16px-rounded
+    text-auto-resize: true
+    anchors.top: prev.bottom
+    anchors.left: playerName.left
+    margin-top: 17
+
+  UIWidget
+    id: clanIcon
+    size: 40 40
+    anchors.left: prev.right
+    anchors.verticalCenter: playerClan.verticalCenter
+    margin-left: 5
+
+  Label
+    id: playerPokedex
+    color: white
+    font: sans-bold-16px-rounded
+    text-auto-resize: true
+    anchors.top: playerGender.bottom
+    anchors.left: playerGender.left
+    margin-top: 5
+    margin-left: 5
+
+  Label
+    id: playerCatches
+    color: white
+    font: sans-bold-16px-rounded
+    text-auto-resize: true
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+
+  Panel
+    id: playerPokemonsPanel
+    size: 165 113
+    anchors.top: playerName.bottom
+    anchors.right: verticalSeparator.right
+    margin-top: 15
+    margin-right: 50
+    layout:
+      type: grid
+      cell-size: 55 55
+      flow: true
+    UIWidget
+    UIWidget
+    UIWidget
+    UIWidget
+    UIWidget
+    UIWidget
+
+  HorizontalSeparator
+    id: horizontalSeparator
+    anchors.top: playerGender.bottom
+    anchors.left: playerGender.left
+    anchors.right: verticalSeparator.left
+    margin-top: 50
+
+  SkillPanel
+    id: wisdomPanel
+    anchors.top: prev.bottom
+    anchors.left: playerGender.left
+    margin-top: 30
+
+  SkillPanel
+    id: strenghtPanel
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 30
+
+  SkillPanel
+    id: vitalityPanel
+    anchors.top: wisdomPanel.top
+    anchors.left: wisdomPanel.right
+    margin-left: 30
+
+  SkillPanel
+    id: defensePanel
+    anchors.top: prev.bottom
+    anchors.left: prev.left
+    margin-top: 30
+
+  Button
+    id: redistributeButton
+    width: 140
+    !text: tr('Redistribute Points')
+    visible: false
+    anchors.horizontalCenter: saveButton.horizontalCenter
+    anchors.bottom: saveButton.top
+    margin-bottom: 4
+    @onClick: modules.game_card.doRedistributePoints()
+
+  Button
+    id: saveButton
+    !text: tr('Save Points')
+    visible: false
+    anchors.horizontalCenter: distributedPoints.horizontalCenter
+    anchors.bottom: distributedPoints.top
+    margin-bottom: 4
+    @onClick: modules.game_card.doSavePoints()
+
+  Label
+    id: distributedPoints
+    color: white
+    font: verdana-11px-rounded
+    text-auto-resize: true
+    anchors.bottom: defensePanel.bottom
+    anchors.right: verticalSeparator.left
+    margin-bottom: 5
+    margin-right: 15
+
+  VerticalSeparator
+    id: verticalSeparator
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-top: 15
+    margin-right: 150
+    margin-bottom: 15
+
+  Label
+    text: Kanto:
+    font: verdana-11px-rounded
+    text-auto-resize: true
+    anchors.top: prev.top
+    anchors.left: prev.right
+    margin-left: 10
+
+  Panel
+    id: badgesPanel
+    size: 45 373
+    image-source: /images/game/card/badges_slot
+    anchors.top: verticalSeparator.top
+    anchors.left: prev.left
+    margin-top: 15
+    layout:
+      type: verticalBox
+      size: 45 45
+      spacing: 2
+      anchors.top: parent.top
+      anchors.left: parent.left
+
+    UIWidget
+      image-source: /images/game/card/badges/1
+    UIWidget
+      image-source: /images/game/card/badges/2
+    UIWidget
+      image-source: /images/game/card/badges/3
+    UIWidget
+      image-source: /images/game/card/badges/4
+    UIWidget
+      image-source: /images/game/card/badges/5
+    UIWidget
+      image-source: /images/game/card/badges/6
+    UIWidget
+      image-source: /images/game/card/badges/7
+    UIWidget
+      image-source: /images/game/card/badges/8
+
+  UIButton
+    id: closeButton
+    !tooltip: tr('Close')
+    size: 22 22
+    image-source: /images/ui/button_close
+    image-color: white
+    image-clip: 0 0 22 22
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 5
+    margin-right: 15
+    @onClick: hide()
+
+    $pressed:
+      image-clip: 0 22 22 22

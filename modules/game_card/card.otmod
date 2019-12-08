@@ -1,0 +1,9 @@
+Module
+  name: game_card
+  description: Manage card window
+  author: baxnie, edubart
+  website: www.otclient.info
+  sandboxed: true
+  scripts: [ card ]
+  @onLoad: init()
+  @onUnload: terminate()

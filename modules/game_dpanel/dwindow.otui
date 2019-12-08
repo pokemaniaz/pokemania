@@ -1,0 +1,207 @@
+UIWindow
+  id: dungeonWindow
+  anchors.centerIn: parent
+  image-source: /images/dungeons/dungeonwindow2
+  size: 228 186
+  @onEscape: modules.game_dpanel.hideWindow()
+  
+  UIWidget
+    id: dungeonInfo
+    image-source: /images/dungeons/infos/01
+    size: 210 77
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 9
+    margin-left: 9
+
+  UIWidget
+    id: dungeonLevel
+    image-source: /images/dungeons/levels/01gray
+    size: 57 16
+    anchors.bottom: dungeonInfo.bottom
+    anchors.right: dungeonInfo.right
+    margin-right: 5
+    margin-bottom: 3
+
+  UIWidget
+    id: stars
+    image-source: /images/dungeons/starbutton/1b
+    size: 83 21
+    anchors.top: dungeonInfo.bottom
+    anchors.right: dungeonInfo.right
+    margin-right: 5
+    margin-top: 7
+
+  UIButton
+    id: startButton
+    @onClick: modules.game_dpanel.startDungeon()
+    anchors.top: stars.bottom
+    anchors.left: stars.left
+    margin-right: 13
+    margin-top: 3
+    size: 85 34
+    image-source: /images/dungeons/startbutton2
+    image-clip: 0 0 85 34
+
+    $hover:
+      image-clip: 0 34 85 34
+
+    $pressed:
+      image-clip: 0 68 85 34
+
+  UIButton
+    id: increaseStar
+    @onClick: modules.game_dpanel.increaseStar()
+    anchors.top: stars.top
+    anchors.right: stars.right
+    margin-top: 2
+    margin-right: 2
+    size: 10 17
+    image-source: /images/dungeons/starbutton/+off
+    image-clip: 0 0 10 17
+
+    $hover:
+      image-clip: 0 17 10 17
+
+    $pressed:
+      image-clip: 0 34 10 17
+
+  UIButton
+    id: decreaseStar
+    @onClick: modules.game_dpanel.decreaseStar()
+    anchors.top: stars.top
+    anchors.left: stars.left
+    margin-top: 2
+    margin-left: 2
+    size: 10 17
+    image-source: /images/dungeons/starbutton/-off
+    image-clip: 0 0 10 17
+
+    $hover:
+      image-clip: 0 17 10 17
+
+    $pressed:
+      image-clip: 0 34 10 17
+
+  Item
+    id: item1
+    image-color: alpha
+    size: 30 30
+    anchors.top: dungeonInfo.bottom
+    anchors.left: parent.left
+    margin-top: 5
+    margin-left: 9
+
+  Item
+    id: item2
+    image-color: alpha
+    size: 30 30
+    anchors.top: item1.top
+    anchors.left: item1.right
+    margin-right: 1
+
+  Item
+    id: item3
+    image-color: alpha
+    size: 30 30
+    anchors.top: item1.top
+    anchors.left: item2.right
+    margin-right: 1
+
+  Item
+    id: item4
+    image-color: alpha
+    size: 30 30
+    anchors.top: item1.top
+    anchors.left: item3.right
+    margin-right: 1
+
+  Item
+    id: item5
+    image-color: alpha
+    size: 30 30
+    anchors.top: item1.bottom
+    anchors.left: item1.left
+    margin-bottom: 1
+
+  Item
+    id: item6
+    image-color: alpha
+    size: 30 30
+    anchors.top: item5.top
+    anchors.left: item2.left
+
+  Item
+    id: item7
+    image-color: alpha
+    size: 30 30
+    anchors.top: item5.top
+    anchors.left: item3.left
+
+  Item
+    id: item8
+    image-color: alpha
+    size: 30 30
+    anchors.top: item5.top
+    anchors.left: item4.left
+  
+  UIWidget
+    id: dungeonTimeWait
+    image-source: /images/dungeons/timeWait/timewait
+    size: 169 28
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-bottom: 1
+
+    UIWidget
+      id: hour1
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+      margin-top: 5
+      margin-left: 8
+
+    UIWidget
+      id: hour2
+      anchors.left: prev.right
+      anchors.top: hour1.top
+      margin-left: -2
+
+    UIWidget
+      id: 2p1
+      image-source: /images/dungeons/timeWait/2pontos
+      anchors.left: prev.right
+      anchors.top: hour1.top
+      margin-left: -1
+      margin-top: 3
+
+    UIWidget
+      id: minu1
+      anchors.left: prev.right
+      anchors.top: hour1.top
+      margin-left: -2
+
+    UIWidget
+      id: minu2
+      anchors.left: prev.right
+      anchors.top: hour1.top
+      margin-left: -2
+
+    UIWidget
+      id: 2p2
+      image-source: /images/dungeons/timeWait/2pontos
+      anchors.left: prev.right
+      anchors.top: hour1.top
+      margin-left: -1
+      margin-top: 3
+
+    UIWidget
+      id: sec1
+      anchors.left: prev.right
+      anchors.top: hour1.top
+      margin-left: -2
+
+    UIWidget
+      id: sec2
+      anchors.left: prev.right
+      anchors.top: hour1.top
+      margin-left: -2

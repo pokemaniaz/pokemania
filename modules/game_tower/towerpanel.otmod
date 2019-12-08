@@ -1,0 +1,9 @@
+Module
+  name: game_tower
+  description: Tower Panel
+  author: Kttallanw
+  website: none
+  sandboxed: true
+  scripts: [ towerpanel ]
+  @onLoad: init()
+  @onUnload: terminate()

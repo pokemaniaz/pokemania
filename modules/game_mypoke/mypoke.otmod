@@ -1,0 +1,9 @@
+Module
+  name: game_mypoke
+  description: Show the targeted hp
+  author: vyctor17
+  website: none
+  sandboxed: true
+  scripts: [ mypoke ]
+  @onLoad: init()
+  @onUnload: terminate()

@@ -1,0 +1,7 @@
+Font
+  name: newfont-55px-rounded
+  texture: newfont-55px-rounded_cp1250
+  height: 55
+  glyph-size: 55 55
+  spacing: -1 -3
+  space-width: 14

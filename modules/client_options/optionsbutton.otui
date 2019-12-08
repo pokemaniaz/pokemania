@@ -1,0 +1,12 @@
+UIButton
+  size: 32 32
+  opacity: 1.0
+  image-source: /images/topbuttons/options
+  anchors.top: parent.top
+  anchors.horizontalCenter: parent.horizontalCenter
+  margin-top: 10
+  @onClick: modules.client_options.toggle()
+  $hover:
+    opacity: 0.8
+  $pressed:
+    opacity: 0.6

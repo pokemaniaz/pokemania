@@ -1,0 +1,392 @@
+UIWindow
+  id: panelWindow
+  anchors.centerIn: parent
+  focusable: false
+  image-source: /images/others/panel
+  size: 775 417
+  @onEscape: modules.game_tower.hide()
+  @onClose: modules.game_tower.hide()
+
+  UIButton
+    id: closeButton
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-top: 4
+    margin-right: 7
+    @onClick: modules.game_tower.hide()
+    size: 31 10
+    image-source: /images/dungeons/closedungeonpanel
+    image-clip: 0 0 31 10
+
+    $hover:
+      image-clip: 0 10 31 10
+
+    $pressed:
+      image-clip: 0 20 31 10
+
+  UIButton 
+    id: buybutton
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 70
+    margin-left: 247
+    size: 62 29
+    @onClick: g_game.talk('/buysaur')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton1
+    anchors.right: parent.right
+    anchors.top: parent.top	
+    margin-top: 70
+    margin-right: 322
+    size: 62 29
+    image-source: /images/others/buybutton
+    @onClick: g_game.talk('/buyblasto')	
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton2
+    anchors.left: buybutton1.left
+    anchors.top: parent.top	
+    margin-top: 70
+    margin-left: 142	
+    size: 62 29    
+    @onClick: g_game.talk('/buyzardy')
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton3
+    anchors.left: buybutton2.left
+    anchors.top: parent.top	
+    margin-top: 70
+    margin-left: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buyzardx')
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton4
+    anchors.left: buybutton2.left
+    anchors.top: parent.top	
+    margin-top: 172
+    margin-left: 142
+    size: 62 29
+    @onClick: g_game.talk('/buykenga')
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton5
+    anchors.left: buybutton2.left
+    anchors.top: buybutton4.top	
+    margin-top: 207
+    margin-left: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buyshiny')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton6
+    anchors.left: buybutton2.left
+    anchors.bottom: buybutton5.bottom	
+    margin-bottom: 104
+    margin-left: 142	
+    size: 62 29	
+    @onClick: g_game.talk('/buysmeargle')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton7
+    anchors.right: buybutton2.right
+    anchors.top: buybutton6.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29	
+    @onClick: g_game.talk('/buyfly')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton8
+    anchors.right: buybutton2.right
+    anchors.top: buybutton4.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buyampharos')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton9
+    anchors.right: buybutton2.right
+    anchors.top: buybutton2.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buygengar')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton10
+    anchors.right: buybutton1.right
+    anchors.top: buybutton2.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buyalaka')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton11
+    anchors.right: buybutton1.right
+    anchors.top: buybutton4.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buymawile')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton12
+    anchors.right: buybutton1.right
+    anchors.top: buybutton6.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buyunlock')	
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton13
+    anchors.right: buybutton3.right
+    anchors.top: buybutton2.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buytyranitar')
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton14
+    anchors.right: buybutton3.right
+    anchors.top: buybutton4.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buymemory')
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: buybutton15
+    anchors.right: buybutton3.right
+    anchors.top: buybutton6.top	
+    margin-top: 104
+    margin-right: 142	
+    size: 62 29
+    @onClick: g_game.talk('/buysurf')
+    image-source: /images/others/buybutton
+    image-clip: 0 0 62 29
+
+    $hover:
+      image-clip: 0 30 62 29
+
+    $pressed:
+      image-clip: 0 59 62 29
+
+  UIButton 
+    id: floor1
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 267
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor1
+
+  UIButton 
+    id: floor2
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 238
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor2
+
+
+  UIButton 
+    id: floor3
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 209
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor3
+
+  UIButton 
+    id: floor4
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 180
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor4
+
+  UIButton 
+    id: floor5
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 151
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor5
+
+  UIButton 
+    id: floor6
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 122
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor6
+
+  UIButton 
+    id: floor7
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 93
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor7
+
+  UIButton 
+    id: floor8
+    anchors.left: parent.left
+    anchors.top: parent.top	
+    margin-top: 68
+    margin-left: 25	
+    size: 152 28
+    image-source: /images/others/buttonfloor8
+
+  Label
+    id: points
+    color: white
+    text-align: center
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    text-auto-resize: true
+    text-offset: 0 1
+    margin-bottom: 52
+    margin-left: 115
+
+  Label
+    id: chance
+    color: white
+    text-align: center
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+    text-auto-resize: true
+    text-offset: 0 1
+    margin-bottom: 27
+    margin-left: 115

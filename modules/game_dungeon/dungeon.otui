@@ -1,0 +1,6 @@
+MainWindow
+  id: dungeonWindow
+  focusable: false
+  phantom: true
+  margin-bottom: 100
+  margin-right: 100

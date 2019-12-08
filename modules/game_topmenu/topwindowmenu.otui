@@ -1,0 +1,5 @@
+UIWindow
+  background-color: #00000090
+  anchors.fill: parent
+  focusable: true
+  @onEscape: self:hide()

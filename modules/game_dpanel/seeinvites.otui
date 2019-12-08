@@ -1,0 +1,163 @@
+MainWindow
+  id: inviteplayerWindow
+  text: Dungeon Team Invites
+  size: 230 150
+  visible: false
+  Label
+    id: alone
+    font: verdana-11px-rounded
+    color: white
+    text: No invites
+    anchors.verticalCenter: parent.verticalCenter
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-bottom: 18
+
+  Label
+    id: invite1
+    image-source: /images/dungeons/invitedgteamwindow
+    size: 191 25
+    font: verdana-11px-rounded
+    color: white
+    text: GODzru
+    text-offset: 6 6
+    anchors.top: parent.top
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 2
+    opacity: 0.9
+    $hover:
+      opacity: 1.0
+
+    Button
+      id: refusebutton1
+      image-source: /images/dungeons/xbutton
+      size: 29 27
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-right: 4
+      margin-top: -1
+      @onClick: g_game.talk('/refusedgteam ' .. self:getParent():getText()) 
+      image-clip: 0 0 29 27
+
+      $hover:
+        image-clip: 0 27 29 27
+
+      $pressed:
+        image-clip: 0 54 29 27
+
+    Button
+      id: acceptbutton1
+      image-source: /images/dungeons/vbutton
+      size: 29 27
+      anchors.top: prev.top
+      anchors.right: prev.left
+      margin-right: 3
+      @onClick: g_game.talk('/acceptdgteam ' .. self:getParent():getText()) 
+      image-clip: 0 0 29 27
+
+      $hover:
+        image-clip: 0 27 29 27
+
+      $pressed:
+        image-clip: 0 54 29 27
+
+  Label
+    id: invite2
+    image-source: /images/dungeons/invitedgteamwindow
+    size: 191 25
+    font: verdana-11px-rounded
+    color: white
+    text-offset: 6 6
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    opacity: 0.9
+    $hover:
+      opacity: 1.0
+
+    Button
+      id: refusebutton2
+      image-source: /images/dungeons/xbutton
+      size: 29 27
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-right: 4
+      margin-top: -1
+      @onClick: g_game.talk('/refusedgteam ' .. self:getParent():getText()) 
+      image-clip: 0 0 29 27
+
+      $hover:
+        image-clip: 0 27 29 27
+
+      $pressed:
+        image-clip: 0 54 29 27
+
+    Button
+      id: acceptbutton2
+      image-source: /images/dungeons/vbutton
+      size: 29 27
+      anchors.top: prev.top
+      anchors.right: prev.left
+      margin-right: 3
+      @onClick: g_game.talk('/acceptdgteam ' .. self:getParent():getText()) 
+      image-clip: 0 0 29 27
+
+      $hover:
+        image-clip: 0 27 29 27
+
+      $pressed:
+        image-clip: 0 54 29 27
+
+  Label
+    id: invite3
+    image-source: /images/dungeons/invitedgteamwindow
+    size: 191 25
+    font: verdana-11px-rounded
+    color: white
+    text-offset: 6 6
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: 8
+    opacity: 0.9
+    $hover:
+      opacity: 1.0
+
+    Button
+      id: refusebutton3
+      image-source: /images/dungeons/xbutton
+      size: 29 27
+      anchors.top: parent.top
+      anchors.right: parent.right
+      margin-right: 4
+      margin-top: -1
+      @onClick: g_game.talk('/refusedgteam ' .. self:getParent():getText()) 
+      image-clip: 0 0 29 27
+
+      $hover:
+        image-clip: 0 27 29 27
+
+      $pressed:
+        image-clip: 0 54 29 27
+
+    Button
+      id: acceptbutton3
+      image-source: /images/dungeons/vbutton
+      size: 29 27
+      anchors.top: prev.top
+      anchors.right: prev.left
+      margin-right: 3
+      @onClick: g_game.talk('/acceptdgteam ' .. self:getParent():getText())
+      image-clip: 0 0 29 27
+
+      $hover:
+        image-clip: 0 27 29 27
+
+      $pressed:
+        image-clip: 0 54 29 27
+
+  Button
+    id: buttonCancel
+    text: Close
+    size: 66 20
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    @onClick: self:getParent():setVisible(false)

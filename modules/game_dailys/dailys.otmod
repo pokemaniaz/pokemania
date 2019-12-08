@@ -1,0 +1,9 @@
+Module
+  name: game_dailys
+  description: Dailys
+  author: GODzru
+  website: pokezworld.com
+  sandboxed: true
+  scripts: [ dailys ]
+  @onLoad: init()
+  @onUnload: terminate()

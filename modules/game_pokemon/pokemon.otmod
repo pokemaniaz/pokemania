@@ -1,0 +1,9 @@
+Module
+  name: game_pokemon
+  description: Show the pokemon moves and player slots
+  author: Noninhouh
+  website: none
+  sandboxed: true
+  scripts: [ pokemon ]
+  @onLoad: init()
+  @onUnload: terminate()

@@ -1,0 +1,9 @@
+Module
+  name: game_dungeon
+  description: Dungeon Loading
+  author: Dzru
+  website: none
+  sandboxed: true
+  scripts: [ dungeon ]
+  @onLoad: init()
+  @onUnload: terminate()

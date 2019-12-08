@@ -1,0 +1,33 @@
+MsgWindow < MainWindow
+  id: msgWindow
+  !text: tr('Send Offer')
+  size: 400 270
+
+  TextEdit
+    id: textBox
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 2
+    margin-left: -4
+    size: 375 200
+
+  Button
+    id: buttonCancel
+    !text: tr('Cancel')
+    height: 20
+    anchors.left: textBox.horizontalCenter
+    anchors.right: textBox.right
+    anchors.top: textBox.bottom
+    margin-top: 7
+    focusable: false
+
+  Button
+    id: buttonOk
+    !text: tr('Send')
+    height: 20
+    anchors.right: textBox.horizontalCenter
+    anchors.left: textBox.left
+    anchors.top: textBox.bottom
+    margin-top: 7
+    margin-right: 6
+    focusable: false

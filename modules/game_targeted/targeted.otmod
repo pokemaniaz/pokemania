@@ -1,0 +1,9 @@
+Module
+  name: game_targeted
+  description: Show the targeted hp
+  author: Noninhouh
+  website: none
+  sandboxed: true
+  scripts: [ targeted ]
+  @onLoad: init()
+  @onUnload: terminate()

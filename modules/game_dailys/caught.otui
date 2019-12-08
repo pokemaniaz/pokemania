@@ -1,0 +1,344 @@
+Panel
+  UIWidget
+    id: load
+    image-source: /images/game/ball
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter
+    size: 55 56
+
+  UIWidget
+    id: info
+    image-source: /images/dailys/infos/caught
+    anchors.top: parent.top
+    anchors.left: parent.left
+    size: 407 30
+
+  HorizontalSeparator
+    height: 7
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: -12
+
+  ScrollablePanel
+    id: mypanel
+    anchors.top: info.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-right: 12
+    margin-top: 2
+
+    ScrollablePanel
+      id: pokespanel
+      size: 408 158
+      anchors.top: parent.top
+      anchors.left: parent.left
+
+      UIWidget
+        id: pokepanel1
+        size: 205 158
+        image-source: /images/dailys/pokepanel
+        anchors.top: parent.top
+        anchors.left: parent.left
+        opacity: 0.6
+        $hover:
+          opacity: 0.8
+        $focus:
+          opacity: 1.0
+
+        Label
+          id: image
+          size: 185 143
+          image-source: /images/game/pokedex/caterpie
+          anchors.horizontalCenter: parent.horizontalCenter
+          anchors.verticalCenter: parent.verticalCenter
+
+        Label
+          id: icon
+          size: 33 33
+          image-source: /images/dailys/miscellaneous/bronze
+          anchors.bottom: parent.bottom
+          anchors.left: parent.left
+          margin-bottom: 7
+          margin-left: 8
+
+        Label
+          id: text
+          font: verdana-11px-rounded
+          color: white
+          text-align: right
+          text-auto-resize: true
+          text-offset: 0 1
+          !text: tr('60 Caterpie')
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-bottom: 5
+          margin-right: 8
+
+      UIWidget
+        id: pokepanel2
+        size: 205 158
+        image-source: /images/dailys/pokepanel
+        anchors.top: parent.top
+        anchors.right: parent.right
+        opacity: 0.6
+        $hover:
+          opacity: 0.8
+        $focus:
+          opacity: 1.0
+
+        Label
+          id: image
+          size: 185 143
+          image-source: /images/game/pokedex/weedle
+          anchors.horizontalCenter: parent.horizontalCenter
+          anchors.verticalCenter: parent.verticalCenter
+
+        Label
+          id: icon
+          size: 33 33
+          image-source: /images/dailys/miscellaneous/bronze
+          anchors.bottom: parent.bottom
+          anchors.left: parent.left
+          margin-bottom: 7
+          margin-left: 8
+
+        Label
+          id: text
+          font: verdana-11px-rounded
+          color: white
+          text-align: right
+          text-auto-resize: true
+          text-offset: 0 1
+          !text: tr('60 Weedle')
+          anchors.right: parent.right
+          anchors.bottom: parent.bottom
+          margin-bottom: 5
+          margin-right: 8
+
+      UIWidget
+        id: pokepanel3
+        visible: false
+        size: 205 158
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+
+        Label
+          id: image
+          size: 164 127
+          image-source: /images/game/pokedex/weedle
+          anchors.top: parent.top
+          anchors.horizontalCenter: parent.horizontalCenter
+          margin-top: 2
+
+        Label
+          id: icon
+          size: 33 33
+          image-source: /images/dailys/miscellaneous/bronze
+          anchors.bottom: parent.bottom
+          anchors.left: image.left
+          margin-left: 5
+          margin-bottom: 5
+
+        ProgressBar
+          id: leftBar
+          width: 110
+          background-color: #66ff66
+          border-color: #333333
+          anchors.bottom: icon.bottom
+          anchors.left: icon.right
+          margin-bottom: 3
+          margin-left: 4
+
+        Label
+          id: name
+          font: verdana-11px-rounded
+          color: white
+          text-align: center
+          text-auto-resize: true
+          text-offset: 0 1
+          !text: tr('Weedle')
+          anchors.horizontalCenter: leftBar.horizontalCenter
+          anchors.bottom: leftBar.top
+          margin-bottom: 2
+
+    Label
+      id: circuitLevel
+      font: verdana-11px-rounded
+      color: white
+      text-align: center
+      text-auto-resize: true
+      text-offset: 0 1
+      !text: tr('Recommended Level: ')
+      anchors.left: pokespanel.left
+      anchors.top: pokespanel.bottom
+      margin-top: 4
+      margin-left: 2
+
+      Label
+        id: value
+        font: verdana-11px-rounded
+        color: white
+        text-align: center
+        text-auto-resize: true
+        text-offset: 0 1
+        !text: tr('80~150')
+        anchors.left: parent.right
+        anchors.top: parent.top
+
+    Label
+      id: circuitProgress
+      font: verdana-11px-rounded
+      color: white
+      text-align: center
+      text-auto-resize: true
+      text-offset: 0 1
+      !text: tr('Progress: ')
+      anchors.left: circuitLevel.left
+      anchors.top: circuitLevel.bottom
+      margin-top: 2
+
+      Label
+        id: value
+        font: verdana-11px-rounded
+        color: white
+        text-align: center
+        text-auto-resize: true
+        text-offset: 0 1
+        !text: tr('1/3')
+        anchors.left: parent.right
+        anchors.top: parent.top
+
+    Label
+      id: difficulty
+      font: verdana-11px-rounded
+      color: white
+      text-align: center
+      text-auto-resize: true
+      text-offset: 0 1
+      !text: tr('Difficulty: ')
+      anchors.left: pokespanel.horizontalCenter
+      anchors.top: pokespanel.bottom
+      margin-top: 4
+      margin-left: 2
+
+      Label
+        id: value
+        font: verdana-11px-rounded
+        color: white
+        text-align: center
+        text-auto-resize: true
+        text-offset: 0 1
+        !text: tr('Hard')
+        anchors.left: parent.right
+        anchors.top: parent.top
+
+  UIButton
+    id: start
+    size: 127 56
+    image-source: /images/dailys/miscellaneous/start
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 5
+    margin-right: 15
+    opacity: 0.8
+    $hover:
+      opacity: 1.0
+    $pressed:
+      opacity: 0.6
+
+  UIButton
+    id: complete
+    size: 169 56
+    visible: false
+    image-source: /images/dailys/miscellaneous/complete
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 5
+    margin-right: 15
+    opacity: 0.8
+    $hover:
+      opacity: 1.0
+    $pressed:
+      opacity: 0.6
+
+  UIButton
+    id: complete2
+    size: 169 56
+    visible: false
+    !tooltip: tr('Termine de derrotar todos para receber sua premiacao')
+    image-source: /images/dailys/miscellaneous/complete2
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 5
+    margin-right: 15
+
+  UIButton
+    id: reset
+    size: 82 26
+    image-source: /images/dailys/miscellaneous/reset
+    anchors.bottom: parent.bottom
+    anchors.right: parent.right
+    margin-bottom: 66
+    margin-right: 15
+    opacity: 0.8
+    $hover:
+      opacity: 1.0
+    $pressed:
+      opacity: 0.6
+
+  UIWidget
+    id: rewardpanel
+    image-source: /images/dailys/rewardpanel
+    size: 234 66
+    anchors.bottom: parent.bottom
+    anchors.left: parent.left
+
+    Label
+      id: rewardExp
+      font: verdana-11px-rounded
+      color: white
+      text-align: center
+      text-auto-resize: true
+      text-offset: 0 1
+      !text: tr('+2000000 EXP')
+      anchors.left: parent.left
+      anchors.verticalCenter: parent.verticalCenter
+      margin-left: 25
+
+    Item
+      id: rewardTokens
+      image-color: alpha
+      !tooltip: tr('Devoted Tokens')
+      anchors.left: rewardExp.right
+      anchors.verticalCenter: rewardExp.verticalCenter
+      margin-left: 10
+      margin-bottom: 2
+      opacity: 0.7
+      $hover:
+        opacity: 1.0
+
+      Label
+        id: count
+        font: verdana-11px-rounded
+        color: white
+        text-align: right
+        text-auto-resize: true
+        text-offset: 0 1
+        !text: tr('+2')
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        margin-bottom: 2
+        margin-right: 2
+
+  Label
+    id: completed
+    font: verdana-11px-rounded
+    color: white
+    text-align: center
+    text-auto-resize: true
+    text-offset: 0 1
+    !text: tr('Você já completou essa Daily hoje.')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.verticalCenter: parent.verticalCenter

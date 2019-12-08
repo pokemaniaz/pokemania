@@ -1,0 +1,9 @@
+Module
+  name: game_topmenu
+  description: Show menu left
+  author: Noninhouh
+  website: none
+  sandboxed: true
+  scripts: [ topmenu ]
+  @onLoad: init()
+  @onUnload: terminate()

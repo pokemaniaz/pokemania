@@ -1,0 +1,15 @@
+UIWidget
+  size: 32 32
+  anchors.top: parent.top
+  anchors.horizontalCenter: parent.horizontalCenter
+  margin-top: 10
+
+  UIButton
+    opacity: 1.0
+    image-source: /images/topbuttons/options
+    anchors.fill: parent
+    @onClick: modules.game_topmenu.showMenuWindow()
+    $hover:
+      opacity: 0.8
+    $pressed:
+      opacity: 0.6

@@ -1,0 +1,63 @@
+OptionCheckBox < CheckBox
+  @onCheckChange: modules.client_options.setOption(self:getId(), self:isChecked())
+  height: 16
+
+  $first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+
+  $!first:
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+
+OptionsButton < UIButton
+  size: 32 32
+  opacity: 1.0
+  image-source: /images/topbuttons/options
+  anchors.top: parent.top
+  anchors.horizontalCenter: parent.horizontalCenter
+  margin-top: 10
+  $hover:
+    opacity: 0.8
+  $pressed:
+    opacity: 0.6
+
+OptionScrollbar < HorizontalScrollBar
+  step: 1
+  @onValueChange: modules.client_options.setOption(self:getId(), self:getValue())
+
+UIWindow
+  background-color: #00000090
+  anchors.fill: parent
+  @onEnter: modules.client_options.hide()
+  @onEscape: modules.client_options.hide()
+
+  MainWindow
+    id: optionsWindow
+    !text: tr('Options')
+    size: 480 340
+    draggable: false
+
+    TabBarVertical
+      id: optionsTabBar
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+
+    Panel
+      id: optionsTabContent
+      anchors.top: optionsTabBar.top
+      anchors.left: optionsTabBar.right
+      anchors.right: parent.right
+      anchors.bottom: optionsTabBar.bottom
+      margin-left: 10
+
+    Button
+      !text: tr('Ok')
+      width: 64
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      @onClick: modules.client_options.hide()

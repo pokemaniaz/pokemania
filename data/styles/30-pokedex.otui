@@ -1,0 +1,205 @@
+PokedexWindow < UIWindow
+  size: 690 430
+  opacity: 1
+  image-source: /images/ui/pokedex_window
+  padding: 3
+
+  CheckBox
+    id: hideUnseen
+    !text: tr('Hide unseen')
+    text-auto-resize: true
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 10
+    margin-left: 30
+    @onCheckChange: modules.game_pokedex.hideUnseen(self:isChecked())
+
+  ScrollablePanel
+    id: pokemonsPanel
+    size: 171 257
+    anchors.top: parent.top
+    anchors.left: parent.left
+    margin-top: 35
+    margin-left: 22
+    vertical-scrollbar: pokedexScrollBar
+    layout:
+      type: grid
+      cell-size: 42 42
+      cell-spacing: 1
+      flow: true
+
+  VerticalScrollBar
+    id: pokedexScrollBar
+    step: 43
+    pixels-scroll: true
+    anchors.top: pokemonsPanel.top
+    anchors.left: pokemonsPanel.right
+    anchors.bottom: pokemonsPanel.bottom
+    margin-left: 3
+
+  Label
+    text-auto-resize: true
+    !text: tr('Search')..':'
+    anchors.left: searchText.left
+    anchors.bottom: searchText.top
+    margin-bottom: 2
+
+  TextEdit
+    id: searchText
+    anchors.top: pokemonsPanel.bottom
+    anchors.right: pokemonsPanel.right
+    anchors.left: pokemonsPanel.left
+    margin-top: 20
+    shift-navigation: true
+    @onTextChange: modules.game_pokedex.searchPokemon()
+
+  Button
+    id: advancedSearch
+    width: 125
+    !text: tr('Advanced Search')
+    anchors.top: searchText.bottom
+    anchors.right: searchText.right
+    margin-top: 10
+    @onClick: modules.game_pokedex.advancedSearchShow()
+
+  Label
+    id: seenLabel
+    text-auto-resize: true
+    !text: tr('Seen')..':'
+    anchors.top: searchText.bottom
+    anchors.right: panelSeparator.left
+    margin-top: 50
+    margin-right: 70
+
+  Label
+    id: seenLabelValue
+    text-auto-resize: true
+    anchors.top: seenLabel.top
+    anchors.right: panelSeparator.left
+    margin-right: 10
+
+  Label
+    id: catchesLabel
+    text-auto-resize: true
+    !text: tr('Catches')..':'
+    anchors.top: seenLabel.bottom
+    anchors.left: seenLabel.left
+    margin-top: 2
+
+  Label
+    id: catchesLabelValue
+    text-auto-resize: true
+    anchors.top: catchesLabel.top
+    anchors.right: panelSeparator.left
+    margin-right: 10
+
+  VerticalSeparator
+    id: panelSeparator
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    margin-left: 210
+
+  Panel
+    id: pokemonInfoPanel
+    size: 450 410
+    anchors.top: parent.top
+    anchors.left: panelSeparator.right
+    margin-top: 7
+    margin-left: 11
+
+    Label
+      id: pokemonName
+      color: white
+      font: verdana-11px-rounded
+      text-auto-resize: true
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 5
+
+    UIWidget
+      id: pokemonImage
+      size: 79 79
+      image-source: /images/game/pokemon/portraits/scyther
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 10
+
+    UIWidget
+      id: pokemonType1
+      size: 20 20
+      anchors.verticalCenter: pokemonName.verticalCenter
+      anchors.left: pokemonName.right
+      margin-left: 7
+
+    UIWidget
+      id: pokemonType2
+      size: 20 20
+      anchors.top: prev.top
+      anchors.left: prev.right
+      margin-left: 4
+
+    Button
+      id: mapMark
+      width: 125
+      !text: tr('Location')
+      anchors.verticalCenter: pokemonName.verticalCenter
+      anchors.left: prev.right
+      margin-left: 4
+      @onClick: sendMapProtocolToServer(self.actualPoke)
+      !tooltip: tr('Mark spawn location in map')
+
+    Label
+      id: pokemonDescription
+      color: white
+      font: verdana-11px-rounded
+      text-wrap: true
+      text-auto-resize: true
+      anchors.top: pokemonImage.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 10
+
+    Label
+      id: pokemonSkills
+      color: white
+      font: verdana-11px-rounded
+      text-wrap: true
+      text-auto-resize: true
+      anchors.top: pokemonDescription.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-top: 15
+
+    TabBarRounded
+      id: pokedexTabBar
+      height: 29
+      anchors.top: pokemonSkills.bottom
+      anchors.right: parent.right
+      anchors.left: parent.left
+      margin-top: 5
+      margin-right: 10
+
+    Panel
+      id: pokedexTabContent
+      anchors.top: pokedexTabBar.bottom
+      anchors.right: parent.right
+      anchors.left: parent.left
+      anchors.bottom: parent.bottom
+      margin-right: 10
+
+  UIButton
+    id: closeButton
+    !tooltip: tr('Close')
+    size: 22 22
+    image-source: /images/ui/button_close
+    image-color: white
+    image-clip: 0 0 22 22
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 3
+    margin-right: 11
+    @onClick: self:getParent():hide()
+
+    $pressed:
+      image-clip: 0 22 22 22

@@ -1,0 +1,9 @@
+Module
+  name: game_dpanel
+  description: Dungeon Panel
+  author: Dz
+  website: none
+  sandboxed: true
+  scripts: [ dpanel ]
+  @onLoad: init()
+  @onUnload: terminate()

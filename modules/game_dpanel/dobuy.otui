@@ -1,0 +1,30 @@
+MainWindow
+  id: buyItem
+  focusable: true
+  size: 360 80
+
+  Label
+    id: buyItemText
+    color: white
+    text-align: center
+    anchors.top: parent.top
+    text-auto-resize: true
+    text-offset: 0 1
+    anchors.horizontalCenter: parent.horizontalCenter
+    margin-top: -6
+
+  Button
+    id: buyButton
+    !text: tr('Buy')
+    color: green
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    margin-right: 35
+
+  Button
+    id: cancelButton
+    !text: tr('Cancel')
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.bottom: parent.bottom
+    @onClick: modules.game_dpanel.hideBuyWindow()
+    margin-left: 35

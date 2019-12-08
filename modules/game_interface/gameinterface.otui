@@ -1,0 +1,59 @@
+GameSidePanel < UIMiniWindowContainer
+  padding: 4
+  width: 198
+  layout:
+    type: verticalBox
+    //spacing: 1
+
+GameBottomPanel < Panel
+  image-source: /images/ui/panel_bottom
+  image-border: 4
+
+GameMapPanel < UIGameMap
+  padding: 4
+  image-source: /images/ui/panel_map
+  image-border: 4
+
+  $on:
+    padding: 0
+
+UIWidget
+  id: gameRootPanel
+  anchors.fill: parent
+
+  GameMapPanel
+    id: gameMapPanel
+    anchors.fill: parent
+    focusable: false
+
+  GameBottomPanel
+    id: gameBottomPanel
+    height: 123
+    image-color: alpha
+    anchors.bottom: parent.bottom
+    anchors.top: next.bottom
+    anchors.left: next.left
+    anchors.right: next.right
+
+  UIWindow
+    id: moveBottomPanel
+    size: 395 15
+    opacity: 1
+    background-color: #FFFFFF75
+    focusable: false
+    @onHoverChange: modules.game_interface.onMoveBottomPanelHoverChange(self)
+
+  GameSidePanel
+    id: gameRightPanel
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    margin-top: 10
+    focusable: false
+    on: true
+
+  UIWidget
+    id: mouseGrabber
+    focusable: false
+    visible: false
