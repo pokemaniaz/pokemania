@@ -332,5 +332,7 @@ UIWidget
       image-source: /images/topbuttons/emerald_shop
       anchors.left: prev.right
       anchors.bottom: prev.bottom
-      @onClick: modules.game_shop.toggle()
+      @onClick: g_platform.openUrl("http://pokemania.ga/index.php/p/v/shopping")
+
+
 
