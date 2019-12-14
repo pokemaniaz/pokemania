@@ -28,7 +28,6 @@ UIWidget
 
   GameBottomPanel
     id: gameBottomPanel
-    height: 123
     image-color: alpha
     anchors.bottom: parent.bottom
     anchors.top: next.bottom
@@ -42,6 +41,7 @@ UIWidget
     background-color: #FFFFFF75
     focusable: false
     @onHoverChange: modules.game_interface.onMoveBottomPanelHoverChange(self)
+
 
   GameSidePanel
     id: gameRightPanel

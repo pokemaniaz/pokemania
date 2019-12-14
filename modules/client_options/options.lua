@@ -212,8 +212,8 @@ function setOption(key, value, force)
     local moveBottomPanel = modules.game_interface.getMoveBottomPanel()
     if value < 100 or value >= 300 then text = 'max' v = 0 end
     consolePanel:getChildById('consoleSizeLabel'):setText(tr('Console size: %s', text))
-    bottomPanel:setHeight(200*(value/100))
-    moveBottomPanel:setWidth(395*(value/100))
+    bottomPanel:setHeight(100*(value/100))
+    moveBottomPanel:setWidth(650*(value/100))
   elseif key == 'minimapSize' then
     if g_modules.getModule('game_minimap'):isLoaded() then
       local text, v = value .. '%', value
